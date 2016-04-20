@@ -12,11 +12,9 @@
 */
 
 Route::get('/', function () {
-    if (\Auth::check()) {
-    	return redirect('/home');
-    }
+    $posts = \App\Post::paginate(10);
 
-    return redirect('/login');
+    return view('index', compact('posts'));
 });
 
 Route::auth();
