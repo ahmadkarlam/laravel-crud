@@ -44,6 +44,9 @@
                     </table>
                   </div>
                 </div>
+                <div class="panel-footer">
+                  {!! $posts->render() !!}
+                </div>
             </div>
         </div>
     </div>
